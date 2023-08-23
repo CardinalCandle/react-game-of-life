@@ -1,7 +1,6 @@
 body {
-  background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/squares.png) 
+  background:darkslategray;
 }
-  
 .box {
   display: inline-block;       
   border: 1px solid black;
