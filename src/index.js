@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom/client';
-import { ButtonToolbar, Dropdown, DropdownButton } from 'react-bootstrap';
+import { ButtonToolbar } from 'react-bootstrap';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
 import './index.css';
 //import App from './App';
 
@@ -78,16 +81,23 @@ class Buttons extends Component {
 					<button className="btn btn-default" onClick={this.props.seed}>
 					  Seed
 					</button>
-					<DropdownButton
-						title="Grid Size"
+          <Dropdown>
+
+					<Dropdown.Toggle
 						id="size-menu"
 						onSelect={this.handleSelect}
-					>
-						<Dropdown.Item eventKey="1">20x10</Dropdown.Item>
-						<Dropdown.Item eventKey="2">50x30</Dropdown.Item>
-						<Dropdown.Item eventKey="3">70x50</Dropdown.Item>
-					</DropdownButton>
+		        >
+            Grid Size
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+						<Dropdown.Item className="dropdown-item" eventKey="1">20x10</Dropdown.Item>
+						<Dropdown.Item className="dropdown-item" eventKey="2">50x30</Dropdown.Item>
+						<Dropdown.Item className="dropdown-item" eventKey="3">70x50</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          
 				</ButtonToolbar>
+        
 			</div>
 			)
 	}
